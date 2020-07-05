@@ -1,13 +1,195 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: linear-gradient(#008bce 30%, #000000 100%) no-repeat;
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  position: relative;
+  display: flex;
+  width: 1280px;
+  height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  font-family: monospace;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 2;
+}
+footer {
+  height: 50px;
+}
+.search__inner-wrapper {
+  display: flex;
+  padding: 0 25%;
+  flex-direction: row;
+  justify-content: center;
+}
+.search {
+  width: 100%;
+}
+footer {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 5px 25px;
+  max-height: 67vh;
+  width: calc(100% - 90px);
+  overflow: auto;
+  background-color: #f7f7f7;
+}
+.list__item {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #008bce;
+  margin: 5px 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: antiquewhite;
+  text-align: center;
+  word-wrap: break-word;
+  width: calc(50% - 44px);
+}
+.pagination__item_active {
+  background-color: #008bce;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  min-width: 100px;
+}
+.pagination__item {
+  display: flex;
+  border: 1px solid #1c84de;
+  margin: 2px 0;
+}
+.pagination__item a,
+.pagination__item div {
+  padding: 5px 10px;
+}
+.repository-preview {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.repository-preview__git-link {
+  display: flex;
+  flex-direction: row;
+}
+.repository-preview__stars-count {
+  display: flex;
+  flex-direction: row;
+}
+.repository-preview__last-commit-date {
+  display: flex;
+  flex-direction: row;
+}
+p {
+  margin: 3px 5px;
+}
+.repository-card > div {
+  margin-top: 20px;
+}
+.repository-card__header {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header__name {
+  font-size: 30px;
+}
+.header__stars {
+  font-size: 20px;
+}
+.header__last-commit-date {
+  font-size: 15px;
+}
+.owner-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.owner-info__avatar-image {
+  height: 200px;
+  width: 200px;
+  background-color: aliceblue;
+}
+.owner-info__link-name {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+}
+.owner-info__link-name > a {
+  margin-left: 25px;
+}
+.languages {
+  border: 3px solid rgb(0, 139, 206);
+}
+.languages > legend {
+  font-size: 20px;
+}
+
+.languages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.languages__list__item {
+  background-color: #f7f7f7;
+  padding: 2px 5px;
+}
+.description {
+  border: 3px solid #005a86;
+  padding: 25px;
+  background-color: bisque;
+}
+.description > legend {
+  font-size: 20px;
+}
+.most-active-contributors {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: bisque;
+}
+.contributor-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.contributor-info__avatar-image {
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
 }
